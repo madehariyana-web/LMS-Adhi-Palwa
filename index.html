@@ -1,0 +1,488 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>LMS Adhi Palwa Rasiguna</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+/* Layout concept: Apple-style product page. Frosted glass nav with a local sub-nav, big centered headline on white, rounded full-width tiles that alternate light grey and black, blue text links with a chevron, pill buttons. */
+:root{
+  --bg:#FFFFFF; --alt:#F5F5F7; --ink:#1D1D1F; --mute:#6E6E73; --line:#D2D2D7;
+  --link:#0066CC; --btn:#0071E3; --btn-h:#0077ED; --on-btn:#FFFFFF;
+  --glass:rgba(251,251,253,.8); --tile:#F5F5F7; --tile-ink:#1D1D1F; --tile-mute:#6E6E73;
+  --dark:#000000; --dark-ink:#F5F5F7; --dark-mute:#A1A1A6; --dark-line:#3A3A3C;
+  --hulu:#2997FF; --ops:#FF9F0A; --hilir:#30D158;
+  --f:-apple-system,BlinkMacSystemFont,'SF Pro Display','SF Pro Text','Inter','Helvetica Neue',Arial,sans-serif;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --bg:#000000; --alt:#161617; --ink:#F5F5F7; --mute:#A1A1A6; --line:#424245;
+  --link:#2997FF; --glass:rgba(22,22,23,.8); --tile:#1D1D1F; --tile-ink:#F5F5F7; --tile-mute:#A1A1A6;
+  --dark:#1D1D1F; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#000000; --alt:#161617; --ink:#F5F5F7; --mute:#A1A1A6; --line:#424245;
+  --link:#2997FF; --glass:rgba(22,22,23,.8); --tile:#1D1D1F; --tile-ink:#F5F5F7; --tile-mute:#A1A1A6;
+  --dark:#1D1D1F; color-scheme:dark}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.47 var(--f);letter-spacing:-.022em;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px)}
+a{color:inherit}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.025em;text-wrap:balance}
+p{margin:0}
+:focus-visible{outline:2px solid var(--btn);outline-offset:3px;border-radius:6px}
+.in{width:100%;max-width:1068px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+
+/* nav */
+.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line)}
+.top .in{display:flex;align-items:center;gap:24px;min-height:48px}
+.brand{display:flex;align-items:center;gap:9px;text-decoration:none;font-size:14px;font-weight:600;letter-spacing:-.01em;white-space:nowrap;min-width:0}
+.brand svg{width:20px;height:20px;flex:none}
+.brand span{overflow:hidden;text-overflow:ellipsis}
+.nav{display:flex;gap:28px;margin-left:auto}
+.nav a{font-size:12px;text-decoration:none;color:var(--mute);letter-spacing:-.01em;padding:6px 0}
+.nav a:hover,.nav a[aria-current="page"]{color:var(--ink)}
+.sub .in{display:flex;align-items:center;min-height:52px;gap:22px}
+.sub h2{font-size:21px;letter-spacing:-.02em;margin-right:auto}
+.sub a{font-size:12px;text-decoration:none;color:var(--mute);white-space:nowrap}
+.sub a:hover,.sub a[aria-current="page"]{color:var(--ink)}
+.sub a[aria-current="page"]{font-weight:600}
+.sub .in{overflow-x:auto}
+
+.pg{display:none}
+.pg.on{display:block}
+
+/* type + buttons */
+.eyebrow{font-size:17px;font-weight:600;color:var(--mute);letter-spacing:-.01em}
+.link{color:var(--link);text-decoration:none;font-size:19px;letter-spacing:-.015em;display:inline-flex;gap:4px;align-items:baseline}
+.link::after{content:"›";font-size:1.15em;line-height:1;transition:transform .15s}
+.link:hover{text-decoration:underline}
+.link:hover::after{transform:translateX(2px)}
+.btn{display:inline-flex;align-items:center;justify-content:center;padding:12px 22px;border-radius:980px;background:var(--btn);color:var(--on-btn);text-decoration:none;font-size:17px;font-weight:400;letter-spacing:-.022em;border:0;cursor:pointer;font-family:inherit}
+.btn:hover{background:var(--btn-h)}
+.btn.ghost{background:transparent;color:var(--link);border:1px solid var(--link);padding:11px 21px}
+.btn.ghost:hover{background:var(--link);color:var(--bg)}
+.btns{display:flex;flex-wrap:wrap;gap:14px 26px;align-items:center}
+
+/* hero */
+.hero{text-align:center;padding-block:72px 40px}
+.hero h1{font-size:clamp(40px,7.2vw,80px);line-height:1.05;letter-spacing:-.035em;margin:12px auto 18px;max-width:14ch;font-weight:700}
+.hero .sub2{font-size:clamp(19px,2.4vw,28px);line-height:1.2;color:var(--mute);max-width:30em;margin:0 auto 28px;letter-spacing:-.015em;font-weight:400}
+.hero .btns{justify-content:center}
+
+/* flow tile */
+.tile{border-radius:28px;overflow:hidden;background:var(--tile);color:var(--tile-ink)}
+.tile.dk{background:var(--dark);color:var(--dark-ink)}
+.tile.dk .tm{color:var(--dark-mute)}
+.tm{color:var(--tile-mute)}
+.flow{padding:56px 44px 48px;text-align:center}
+.flow h2{font-size:clamp(30px,4.4vw,48px);line-height:1.08;letter-spacing:-.03em;margin:8px auto 36px;max-width:16ch}
+.cols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;text-align:left}
+.col{padding:4px 28px;border-left:1px solid var(--dark-line)}
+.col:first-child{border-left:0;padding-left:0}
+.col:last-child{padding-right:0}
+.col h3{font-size:15px;font-weight:600;display:flex;align-items:center;gap:8px;margin-bottom:14px;color:var(--c)}
+.col h3::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--c)}
+.col ol{margin:0;padding:0;list-style:none;display:grid;gap:10px}
+.col li{display:flex;gap:12px;align-items:baseline;font-size:21px;font-weight:600;letter-spacing:-.02em;line-height:1.2}
+.col li i{font-style:normal;font-size:13px;font-weight:500;color:var(--dark-mute);min-width:20px;font-variant-numeric:tabular-nums}
+.col.h{--c:var(--hulu)}.col.o{--c:var(--ops)}.col.l{--c:var(--hilir)}
+.flow .fn{margin-top:34px;font-size:14px;color:var(--dark-mute)}
+
+/* two tiles */
+.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:14px}
+.pt{padding:48px 40px 40px;display:flex;flex-direction:column;gap:12px;min-height:440px;text-align:center;align-items:center;text-decoration:none}
+.pt .eyebrow{font-size:14px}
+.pt h3{font-size:clamp(28px,3.4vw,40px);line-height:1.1;letter-spacing:-.03em;max-width:15em}
+.pt p{font-size:19px;line-height:1.3;max-width:24em;letter-spacing:-.015em}
+.pt .stats{display:flex;gap:30px;margin-top:auto;padding-top:26px}
+.pt .stats div{text-align:center}
+.pt .stats b{display:block;font-size:44px;line-height:1;font-weight:700;letter-spacing:-.035em}
+.pt .stats span{font-size:13px}
+.pt .btns{margin-top:6px;justify-content:center}
+.pt .link{margin-top:2px}
+.tile.dk .link{color:#2997FF}
+
+/* sections */
+.band{background:var(--alt);margin-top:14px}
+.sec{padding-block:80px}
+.sec h2.sh{font-size:clamp(30px,4.4vw,48px);line-height:1.08;letter-spacing:-.03em;text-align:center;margin-bottom:12px;font-weight:700}
+.sec .ssub{text-align:center;font-size:21px;line-height:1.3;color:var(--mute);max-width:30em;margin:0 auto 44px;letter-spacing:-.015em}
+.topics{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.topic{background:var(--bg);border-radius:20px;padding:26px 24px 28px}
+.topic h3{font-size:19px;line-height:1.2;margin-bottom:8px;letter-spacing:-.02em}
+.topic p{font-size:15px;line-height:1.4;color:var(--mute);letter-spacing:-.01em}
+.steps{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin:0;padding:0;list-style:none;counter-reset:s}
+.steps li{counter-increment:s;text-align:center}
+.steps li::before{content:counter(s);display:block;font-size:72px;font-weight:700;letter-spacing:-.04em;line-height:1;color:var(--line);margin-bottom:10px}
+.steps b{display:block;font-size:21px;margin-bottom:6px;letter-spacing:-.02em}
+.steps span{font-size:16px;color:var(--mute);line-height:1.4;display:block;max-width:20em;margin:0 auto}
+
+/* inner pages */
+.ph{padding-block:56px 32px;text-align:center}
+.ph h1{font-size:clamp(34px,5.6vw,60px);line-height:1.06;letter-spacing:-.035em;font-weight:700;margin:6px auto 14px;max-width:18ch}
+.ph p{font-size:clamp(18px,2.1vw,24px);line-height:1.25;color:var(--mute);max-width:30em;margin:0 auto;letter-spacing:-.015em}
+.crumb{font-size:12px;color:var(--mute);display:flex;justify-content:center;flex-wrap:wrap;gap:6px}
+.crumb a{text-decoration:none}.crumb a:hover{color:var(--ink);text-decoration:underline}
+.wide{width:100%;max-width:1360px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.frame{border-radius:28px;overflow:hidden;background:var(--alt);border:1px solid var(--line)}
+.frame iframe{display:block;width:100%;height:min(940px,calc(100vh - 150px));min-height:620px;border:0;background:var(--alt)}
+.cap{text-align:center;font-size:13px;color:var(--mute);margin:16px 0 0}
+.notes{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:56px}
+.note{background:var(--alt);border-radius:20px;padding:26px 24px}
+.note h3{font-size:19px;margin-bottom:8px;letter-spacing:-.02em}
+.note p{font-size:15px;line-height:1.4;color:var(--mute)}
+.alist{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+
+/* books */
+.book{display:grid;grid-template-columns:minmax(0,340px) minmax(0,1fr);gap:64px;align-items:center;padding-block:24px 56px}
+.cover{aspect-ratio:3/4.2;border-radius:4px 12px 12px 4px;background:linear-gradient(160deg,#16293A,#050B10);color:#F5F5F7;padding:30px 26px 24px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:0 30px 60px -18px rgba(0,0,0,.45),0 6px 14px rgba(0,0,0,.18);position:relative;overflow:hidden;min-width:0}
+.cover::before{content:"";position:absolute;left:0;top:0;bottom:0;width:12px;background:linear-gradient(90deg,rgba(255,255,255,.18),rgba(255,255,255,0))}
+.cover small{font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#A1A1A6;padding-left:8px}
+.cover b{font-size:27px;line-height:1.1;letter-spacing:-.03em;padding-left:8px;display:block;font-weight:700}
+.cover span{font-size:13px;color:#A1A1A6;padding-left:8px}
+.bi h2{font-size:clamp(28px,3.6vw,40px);line-height:1.1;letter-spacing:-.03em;font-weight:700}
+.bi .by{font-size:21px;color:var(--mute);margin:8px 0 18px}
+.bi p.d{font-size:17px;line-height:1.45;color:var(--ink);max-width:34em}
+.dl{margin:24px 0 26px;border-top:1px solid var(--line)}
+.dl div{display:grid;grid-template-columns:130px minmax(0,1fr);gap:12px;padding:11px 0;border-bottom:1px solid var(--line);font-size:15px}
+.dl dt{color:var(--mute);margin:0}.dl dd{margin:0}
+.legal{font-size:12px;color:var(--mute);margin-top:16px;max-width:44em;line-height:1.4}
+.toc{border-top:1px solid var(--line)}
+details{border-bottom:1px solid var(--line)}
+summary{cursor:pointer;padding:22px 4px;font-size:21px;font-weight:600;letter-spacing:-.02em;display:flex;gap:16px;align-items:baseline;list-style:none}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"";margin-left:auto;width:12px;height:12px;flex:none;align-self:center;background:linear-gradient(var(--ink),var(--ink)) center/100% 1.6px no-repeat,linear-gradient(var(--ink),var(--ink)) center/1.6px 100% no-repeat;transition:transform .2s}
+details[open] summary::after{transform:rotate(45deg)}
+summary i{font-style:normal;font-size:13px;font-weight:600;color:var(--mute);min-width:52px;letter-spacing:0}
+details .bd{padding:0 4px 24px 72px;color:var(--mute);font-size:16px;line-height:1.45;max-width:46em}
+details ul{margin:0 0 12px;padding-left:18px}
+details li{margin:4px 0}
+details .at{color:var(--ink)}
+
+footer{background:var(--alt);margin-top:80px;border-top:1px solid var(--line)}
+footer .in{padding-block:22px;font-size:12px;color:var(--mute);display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px 24px;line-height:1.4}
+
+@media (max-width:900px){
+  .hero{padding-block:48px 28px}
+  .flow{padding:40px 22px 36px}
+  .cols{grid-template-columns:minmax(0,1fr);gap:22px}
+  .col,.col:first-child,.col:last-child{padding:0;border-left:0}
+  .col+.col{border-top:1px solid var(--dark-line);padding-top:20px}
+  .pair{grid-template-columns:minmax(0,1fr)}
+  .pt{min-height:0;padding:40px 24px 32px}
+  .topics{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps{grid-template-columns:minmax(0,1fr);gap:30px}
+  .notes,.alist{grid-template-columns:minmax(0,1fr)}
+  .book{grid-template-columns:minmax(0,1fr);gap:36px}
+  .cover{max-width:280px;margin:0 auto}
+  .sec{padding-block:56px}
+  details .bd{padding-left:4px}
+}
+@media (max-width:560px){
+  .topics{grid-template-columns:minmax(0,1fr)}
+  .nav{gap:18px}
+  .top .in{gap:14px}
+  .brand span{max-width:150px}
+  .dl div{grid-template-columns:minmax(0,1fr);gap:2px}
+  .frame{border-radius:18px}
+  .frame iframe{min-height:560px;height:calc(100vh - 120px)}
+  summary{font-size:18px}
+  summary i{min-width:44px}
+}
+
+/* mobile app mode */
+.fbar,.mob,.tabs{display:none}
+.frame.full{position:fixed;inset:0;z-index:100;border-radius:0;border:0;display:flex;flex-direction:column;background:var(--bg)}
+.frame.full .fbar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:calc(env(safe-area-inset-top,0px) + 8px) max(16px,env(safe-area-inset-right,0px)) 8px max(16px,env(safe-area-inset-left,0px));background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-bottom:1px solid var(--line);font-size:15px;font-weight:600}
+.frame.full iframe{display:block;flex:1;height:auto;min-height:0;width:100%}
+.frame.full .mob{display:none}
+.fbar .btn{padding:8px 18px;font-size:15px;min-height:36px}
+body.lock{overflow:hidden}
+.mob{flex-direction:column;align-items:center;text-align:center;gap:14px;padding:36px 22px 32px}
+.mob h3{font-size:24px;line-height:1.15;letter-spacing:-.025em}
+.mob p{font-size:15px;color:var(--mute);line-height:1.4;max-width:22em}
+@media (max-width:700px){
+  html{-webkit-tap-highlight-color:transparent}
+  a,button,summary{touch-action:manipulation}
+  body{padding-bottom:calc(64px + env(safe-area-inset-bottom,0px))}
+  .nav,#subbar{display:none!important}
+  .brand span{max-width:none}
+  .top .in{min-height:48px}
+  .btn{min-height:48px;font-size:17px}
+  .link{padding-block:8px}
+  .hero{padding-block:36px 24px}
+  .hero .btns{flex-direction:column;gap:6px}
+  .hero .btns .btn{width:100%;max-width:320px}
+  .ph{padding-block:28px 20px}
+  .crumb{display:none}
+  .pt .stats b{font-size:36px}
+  .frame:not(.full) iframe{display:none}
+  .frame:not(.full) .mob{display:flex}
+  .frame:not(.full) .fbar{display:none}
+  .cap{display:none}
+  summary{min-height:56px;padding:14px 2px}
+  .btns{flex-direction:column;align-items:stretch;gap:6px}
+  .btns .link{align-self:center}
+  footer{margin-top:48px}
+  .tabs{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));position:fixed;left:0;right:0;bottom:0;z-index:25;background:var(--glass);-webkit-backdrop-filter:saturate(180%) blur(20px);backdrop-filter:saturate(180%) blur(20px);border-top:1px solid var(--line);padding:6px max(8px,env(safe-area-inset-right,0px)) calc(6px + env(safe-area-inset-bottom,0px)) max(8px,env(safe-area-inset-left,0px))}
+  .tabs a{display:flex;flex-direction:column;align-items:center;gap:3px;padding:5px 0;min-height:48px;text-decoration:none;color:var(--mute);font-size:10.5px;font-weight:500;letter-spacing:0;border-radius:10px}
+  .tabs a svg{width:24px;height:24px}
+  .tabs a[aria-current="page"]{color:var(--btn)}
+  .frame.full{padding-bottom:0}
+}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+
+<header class="top">
+  <div class="in">
+    <a class="brand" href="#beranda" aria-label="Beranda LMS Adhi Palwa Rasiguna">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 16.5h18l-2.2 3.5H5.2z"/><path d="M6 16.5V11h9v5.5M15 13h3.5l1.5 3.5"/><path d="M9 11V7.5h3V11"/></svg>
+      <span>Adhi Palwa Rasiguna · Learning</span>
+    </a>
+    <nav class="nav" aria-label="Menu utama">
+      <a href="#beranda" data-nav="beranda">Beranda</a>
+      <a href="#artikel" data-nav="artikel">Artikel</a>
+    </nav>
+  </div>
+  <div class="sub" id="subbar" hidden>
+    <div class="in">
+      <h2>Artikel</h2>
+      <a href="#bisnis-proses" data-sub="bisnis-proses">Bisnis Proses Shipping Company</a>
+      <a href="#books" data-sub="books">Books</a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <!-- BERANDA -->
+  <section class="pg" id="pg-beranda" aria-label="Beranda">
+    <div class="in">
+      <div class="hero">
+        <div class="eyebrow">Ruang belajar PT Adhi Palwa Rasiguna</div>
+        <h1>Pahami satu voyage dari awal sampai akhir.</h1>
+        <p class="sub2">Simulasi bisnis proses shipping company dan buku rujukan penanganan muatan, dalam satu tempat.</p>
+        <div class="btns">
+          <a class="btn" href="#bisnis-proses">Buka simulasi</a>
+          <a class="link" href="#books">Lihat Books</a>
+        </div>
+      </div>
+
+      <div class="tile dk flow" aria-label="Sembilan tahap voyage">
+        <div class="eyebrow tm">Alur lengkap</div>
+        <h2>Sembilan tahap. Satu voyage.</h2>
+        <div class="cols">
+          <div class="col h"><h3>Hulu</h3><ol><li><i>01</i>Penawaran</li><li><i>02</i>Kontrak</li><li><i>03</i>Rencana voyage</li><li><i>04</i>Siap kapal</li></ol></div>
+          <div class="col o"><h3>Operasi</h3><ol><li><i>05</i>Muat</li><li><i>06</i>Berlayar</li><li><i>07</i>Bongkar</li></ol></div>
+          <div class="col l"><h3>Hilir</h3><ol><li><i>08</i>Dokumen &amp; tagih</li><li><i>09</i>Rawat &amp; evaluasi</li></ol></div>
+        </div>
+        <p class="fn">Tiap tahap berisi aktivitas, PIC, dokumen, KPI, dan risiko.</p>
+      </div>
+
+      <div class="pair">
+        <a class="tile pt" href="#bisnis-proses">
+          <span class="eyebrow tm">Artikel · Simulasi</span>
+          <h3>Bisnis Proses Shipping Company</h3>
+          <p class="tm">Diorama 3D isometrik dari enquiry sampai evaluasi untuk LCT 2500 DWT. Klik tahap, lalu klik dokumen untuk melihat contoh formnya.</p>
+          <div class="stats"><div><b>9</b><span class="tm">tahap</span></div><div><b>33</b><span class="tm">contoh dokumen</span></div></div>
+          <span class="link">Buka simulasi</span>
+        </a>
+        <a class="tile dk pt" href="#books">
+          <span class="eyebrow tm">Artikel · Books</span>
+          <h3>Dasar-Dasar Penanganan dan Pengaturan Muatan Kapal Niaga</h3>
+          <p class="tm">Buku rujukan karya Antoni Arif Priadi tentang asas pemuatan, stowage plan, lashing, dan stowage factor.</p>
+          <div class="stats"><div><b>6</b><span class="tm">bab</span></div><div><b>2020</b><span class="tm">PIP Semarang</span></div></div>
+          <span class="link">Buka buku</span>
+        </a>
+      </div>
+    </div>
+
+    <div class="band">
+      <div class="in sec">
+        <h2 class="sh">Yang dibahas.</h2>
+        <p class="ssub">Topik yang ada di materi saat ini.</p>
+        <div class="topics">
+          <div class="topic"><h3>Komersial dan kontrak</h3><p>Enquiry, voyage estimate, quotation, SPK, booking confirmation.</p></div>
+          <div class="topic"><h3>Perencanaan voyage</h3><p>Passage plan, stowage dan lashing plan, stabilitas, bunker.</p></div>
+          <div class="topic"><h3>Muat dan bongkar</h3><p>Tally, SOF, berita acara, B/L dan manifest, delivery order.</p></div>
+          <div class="topic"><h3>Pelayaran</h3><p>Noon report, cuaca, pengecekan lashing, dan laporan voyage.</p></div>
+          <div class="topic"><h3>Laytime dan penagihan</h3><p>Demurrage, FDA, invoice, dan voyage result.</p></div>
+          <div class="topic"><h3>Penanganan muatan</h3><p>Hogging, sagging, DLC, stowage factor, dan broken stowage.</p></div>
+          <div class="topic"><h3>Perawatan dan evaluasi</h3><p>Inspeksi pasca-voyage, PMS, docking, dan KPI.</p></div>
+          <div class="topic"><h3>Keselamatan kerja</h3><p>APD, ruang terbatas, hot work, dan lashing yang benar.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="in sec">
+      <h2 class="sh">Cara belajar.</h2>
+      <p class="ssub">Simulasi memberi gambaran besar, buku memberi dasarnya.</p>
+      <ol class="steps">
+        <li><b>Lihat alur besarnya</b><span>Putar simulasi dan ikuti satu voyage dari penawaran sampai evaluasi.</span></li>
+        <li><b>Buka dokumennya</b><span>Pada tiap tahap, klik nama dokumen untuk melihat contoh form dan cara pakainya.</span></li>
+        <li><b>Perdalam lewat buku</b><span>Baca bab stowage, lashing, dan DLC, lalu bandingkan dengan stowage plan contoh.</span></li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ARTIKEL (indeks) -->
+  <section class="pg" id="pg-artikel" aria-label="Artikel">
+    <div class="in">
+      <div class="ph">
+        <h1>Artikel</h1>
+        <p>Materi bacaan dan simulasi. Pilih salah satu sub halaman.</p>
+      </div>
+      <div class="alist">
+        <a class="tile pt" href="#bisnis-proses">
+          <span class="eyebrow tm">Sub halaman</span>
+          <h3>Bisnis Proses Shipping Company</h3>
+          <p class="tm">Simulasi isometrik 3D dengan panel tahap dan contoh dokumen.</p>
+          <span class="link" style="margin-top:auto">Buka</span>
+        </a>
+        <a class="tile dk pt" href="#books">
+          <span class="eyebrow tm">Sub halaman</span>
+          <h3>Books</h3>
+          <p class="tm">Buku rujukan penanganan dan pengaturan muatan kapal niaga.</p>
+          <span class="link" style="margin-top:auto">Buka</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTIKEL / BISNIS PROSES -->
+  <section class="pg" id="pg-bisnis-proses" aria-label="Bisnis Proses Shipping Company">
+    <div class="in">
+      <div class="ph">
+        <div class="crumb"><a href="#beranda">Beranda</a><span>/</span><a href="#artikel">Artikel</a><span>/</span><span>Bisnis Proses Shipping Company</span></div>
+        <h1>Bisnis Proses Shipping Company</h1>
+        <p>Klik objek atau nomor di diorama untuk membuka tahap, lalu klik nama dokumen di panel kanan untuk melihat contoh formulirnya.</p>
+      </div>
+    </div>
+    <div class="wide">
+      <div class="frame" id="frame">
+        <div class="fbar"><span>Simulasi operasional LCT</span><button class="btn" id="fclose" type="button">Selesai</button></div>
+        <div class="mob">
+          <h3>Simulasi 3D untuk layar penuh</h3>
+          <p>Agar nyaman disentuh, simulasi dibuka memenuhi layar ponsel. Ketuk tahap, lalu ketuk nama dokumen untuk melihat contoh formnya.</p>
+          <button class="btn" id="fopen" type="button">Buka simulasi</button>
+        </div>
+        <iframe id="simfr" title="Simulasi operasional LCT" data-src="simulasi.html" allow="fullscreen" loading="lazy"></iframe>
+      </div>
+      <p class="cap">Simulasi operasional LCT 2500 DWT. Semua angka dan nama dalam contoh adalah fiktif.</p>
+    </div>
+    <div class="in">
+      <div class="notes">
+        <div class="note"><h3>Dokumen contoh</h3><p>Setiap form punya stempel CONTOH dan catatan cara pakai. Angkanya saling nyambung dari quotation sampai voyage result.</p></div>
+        <div class="note"><h3>Sesuai buku rujukan</h3><p>Pembagian muatan, daya tahan geladak, lashing, dan stowage plan mengikuti buku di halaman Books.</p></div>
+        <div class="note"><h3>Draft proses</h3><p>Ganti data kapal, tarif, dan klausul kontrak dengan data perusahaan yang sebenarnya sebelum dipakai di operasi.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTIKEL / BOOKS -->
+  <section class="pg" id="pg-books" aria-label="Books">
+    <div class="in">
+      <div class="ph">
+        <div class="crumb"><a href="#beranda">Beranda</a><span>/</span><a href="#artikel">Artikel</a><span>/</span><span>Books</span></div>
+        <h1>Books</h1>
+        <p>Buku rujukan untuk memahami dasar penanganan dan pengaturan muatan kapal.</p>
+      </div>
+
+      <div class="book">
+        <div class="cover" role="img" aria-label="Sampul buku Dasar-Dasar Penanganan dan Pengaturan Muatan Kapal Niaga">
+          <small>Politeknik Ilmu Pelayaran Semarang</small>
+          <b>Dasar-Dasar Penanganan dan Pengaturan Muatan Kapal Niaga</b>
+          <span>Antoni Arif Priadi</span>
+        </div>
+        <div class="bi">
+          <h2>Dasar-Dasar Penanganan dan Pengaturan Muatan Kapal Niaga</h2>
+          <p class="by">Antoni Arif Priadi</p>
+          <p class="d">Buku ini menjelaskan lima asas pemuatan: melindungi kapal, melindungi muatan, menjaga keselamatan buruh dan ABK, memuat secara sistematis, dan memakai ruang muat semaksimal mungkin. Cocok sebagai dasar sebelum membaca stowage plan atau menyusun rencana muat.</p>
+          <dl class="dl">
+            <div><dt>Penerbit</dt><dd>Politeknik Ilmu Pelayaran Semarang</dd></div>
+            <div><dt>Edisi</dt><dd>Edisi 1, cetakan 1, November 2020</dd></div>
+            <div><dt>ISBN</dt><dd>978-623-7445-53-1 (e-ISBN 978-623-7445-54-8)</dd></div>
+            <div><dt>Reviewer</dt><dd>Eko Murdiyanto</dd></div>
+          </dl>
+          <div class="btns">
+            <a class="btn" href="https://repository.pip-semarang.ac.id/3885/1/Seri%20Penanganan%20dan%20pengaturan%20muatan.pdf" target="_blank" rel="noopener noreferrer">Buka PDF</a>
+            <a class="link" href="#bisnis-proses">Lihat penerapannya di simulasi</a>
+          </div>
+          <p class="legal">Hak cipta pada penulis. PDF dibuka dari repositori resmi PIP Semarang, bukan disalin ke halaman ini.</p>
+        </div>
+      </div>
+
+      <div class="sec" style="padding-top:24px;padding-bottom:0">
+        <h2 class="sh">Isi buku.</h2>
+        <p class="ssub">Daftar bab, dengan catatan di tahap mana isinya muncul di simulasi.</p>
+        <div class="toc">
+          <details><summary><i>Bab I</i>Berbagai jenis kapal niaga</summary><div class="bd"><ul><li>General cargo ship</li><li>Kapal peti kemas</li><li>Kapal curah kering</li><li>Kapal curah cair (oil tanker)</li><li>Kapal Ro-Ro: muatan beroda dimuat lewat ramp door, umumnya di buritan, ada juga di lambung dan haluan</li></ul><span class="at">Di simulasi:</span> LCT dengan ramp haluan di bagian Kapal acuan.</div></details>
+          <details><summary><i>Bab II</i>Asas pemuatan untuk melindungi kapal</summary><div class="bd"><ul><li>Pembagian vertikal: langsar (tender) dan kaku (stiff), GM ± 5% lebar kapal</li><li>Pembagian longitudinal: trim, hogging, sagging</li><li>Pembagian transversal: keseimbangan kiri-kanan dan rolling</li></ul><span class="at">Di simulasi:</span> tahap 3 Perencanaan voyage, contoh stowage plan dan perhitungan stabilitas.</div></details>
+          <details><summary><i>Bab III</i>Asas pemuatan untuk melindungi muatan</summary><div class="bd"><ul><li>Persiapan ruang muat: clean and dry, got, drainase</li><li>Dunnage: lantai, vertikal, antar lapis, atas</li><li>Pemisahan dan penandaan muatan</li><li>Peranginan muatan dan kondensasi</li><li>Lashing: rantai, wire, steel strapping, pengikat kendaraan</li></ul><span class="at">Di simulasi:</span> tahap 4 Siap kapal (checklist) dan tahap 5 Muat (lashing).</div></details>
+          <details><summary><i>Bab IV</i>Asas pemuatan untuk melindungi buruh dan ABK</summary><div class="bd"><ul><li>Alat pelindung diri (APD)</li><li>Pencegahan kecelakaan kerja dan penggunaan derek</li><li>Ruang terbatas, enclosed space, hot work, cold work</li></ul><span class="at">Di simulasi:</span> tahap 5 Muat, bagian aktivitas dan keselamatan.</div></details>
+          <details><summary><i>Bab V</i>Asas pemuatan secara sistematis</summary><div class="bd"><ul><li>Long hatch, over stowage, over carriage</li><li>Stowage plan, hatch list, dan discharging list</li><li>Contoh stowage plan untuk beberapa jenis kapal, termasuk Ro-Ro</li></ul><span class="at">Di simulasi:</span> tahap 3 dan 7, dokumen Stowage plan serta Hatch list dan discharging list.</div></details>
+          <details><summary><i>Bab VI</i>Asas pemuatan ruang maksimum</summary><div class="bd"><ul><li>Broken stowage dan cara menekannya</li><li>Stowage factor</li><li>Full and down</li><li>Deck load capacity (DLC): tinggi maksimum h = DLC × SF</li></ul><span class="at">Di simulasi:</span> tabel pemeriksaan DLC pada contoh stowage plan.</div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<nav class="tabs" aria-label="Navigasi bawah">
+  <a href="#beranda" data-tab="beranda"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 11l8-7 8 7v8a1 1 0 0 1-1 1h-4v-6H9v6H5a1 1 0 0 1-1-1z"/></svg>Beranda</a>
+  <a href="#bisnis-proses" data-tab="bisnis-proses"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M4 7.5l8 4.5 8-4.5M12 12v9"/></svg>Simulasi</a>
+  <a href="#books" data-tab="books"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4.5A1.5 1.5 0 0 1 6.5 3H19v15H6.5A1.5 1.5 0 0 0 5 19.5z"/><path d="M5 19.5A1.5 1.5 0 0 0 6.5 21H19v-3"/></svg>Books</a>
+</nav>
+
+<footer>
+  <div class="in">
+    <span>PT Adhi Palwa Rasiguna · Learning Management System</span>
+    <span>Materi dalam tahap draft. Data pada contoh dokumen adalah fiktif.</span>
+  </div>
+</footer>
+
+<script>
+(function(){
+var PAGES=['beranda','artikel','bisnis-proses','books'];
+var SUB=['bisnis-proses','books'];
+var sub=document.getElementById('subbar'), fr=document.getElementById('simfr'), frame=document.getElementById('frame'), mq=window.matchMedia('(max-width:700px)');
+function loadSim(){ if(fr && !fr.getAttribute('src')) fr.setAttribute('src',fr.getAttribute('data-src')); }
+function openFull(){ loadSim(); frame.classList.add('full'); document.body.classList.add('lock'); }
+function closeFull(){ frame.classList.remove('full'); document.body.classList.remove('lock'); }
+function cur(){var h=(location.hash||'').replace('#',''); return PAGES.indexOf(h)>=0?h:'beranda';}
+function show(){
+  var p=cur();
+  PAGES.forEach(function(k){document.getElementById('pg-'+k).classList.toggle('on',k===p);});
+  Array.prototype.forEach.call(document.querySelectorAll('[data-nav]'),function(a){
+    var on=a.getAttribute('data-nav')===p || (a.getAttribute('data-nav')==='artikel' && SUB.indexOf(p)>=0);
+    if(on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+  });
+  var inArt=p==='artikel'||SUB.indexOf(p)>=0;
+  sub.hidden=!inArt;
+  Array.prototype.forEach.call(document.querySelectorAll('[data-sub]'),function(a){
+    if(a.getAttribute('data-sub')===p) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('[data-tab]'),function(a){
+    var t=a.getAttribute('data-tab'); if(t===p) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+  });
+  closeFull();
+  if(p==='bisnis-proses' && fr && !mq.matches) loadSim();
+  window.scrollTo(0,0);
+}
+function theme(){
+  var t=document.documentElement.getAttribute('data-theme');
+  try{ if(fr&&fr.contentWindow) fr.contentWindow.postMessage({type:'theme',theme:t||null},'*'); }catch(e){}
+}
+window.addEventListener('hashchange',show);
+document.getElementById('fopen').addEventListener('click',openFull);
+document.getElementById('fclose').addEventListener('click',closeFull);
+document.addEventListener('keydown',function(e){ if(e.key==='Escape' && frame.classList.contains('full')) closeFull(); });
+var onMq=function(){ if(!mq.matches){ closeFull(); if(cur()==='bisnis-proses') loadSim(); } };
+if(mq.addEventListener) mq.addEventListener('change',onMq); else if(mq.addListener) mq.addListener(onMq);
+if(fr){ fr.addEventListener('load',theme); }
+new MutationObserver(theme).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+show();
+})();
+</script>
+
+</body></html>
